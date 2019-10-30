@@ -6,13 +6,13 @@ import org.apache.kafka.streams.kstream.KStream;
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;
 
-public interface SpeedCheckBinding {
-    String CAR_EVENTS_IN = "car-events-in";
-    String VIOLATIONS_OUT = "violations-out";
+public interface SpeedCheckBinder {
+    String SPEED_CHECK_IN = "speed-checks-in";
+    String VIOLATION_OUT = "violations-out";
 
-    @Input(CAR_EVENTS_IN)
-    KStream<String, CarEvent> carEventsIn();
+    @Input(SPEED_CHECK_IN)
+    KStream<String, CarEvent> speedCheckInbound();
 
-    @Output(VIOLATIONS_OUT)
-    KStream<String, ViolationEvent> violationsOut();
+    @Output(VIOLATION_OUT)
+    KStream<String, ViolationEvent> violoationOutbound();
 }

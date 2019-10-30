@@ -24,21 +24,19 @@ ext {
 }
 
 dependencies {
+    implementation 'org.apache.kafka:kafka-streams'
+    implementation 'org.springframework.cloud:spring-cloud-function-context'
     implementation 'org.springframework.cloud:spring-cloud-stream'
-
-    // https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-kafka
-    compile group: 'org.springframework.integration', name: 'spring-integration-kafka', version: '3.2.0.RELEASE'
-
-    // https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams
-    compile group: 'org.apache.kafka', name: 'kafka-streams', version: '2.3.1'
-
-
+    implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+    implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka-streams'
+    implementation 'org.springframework.kafka:spring-kafka'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'org.springframework.cloud:spring-cloud-stream-test-support'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
 dependencyManagement {
