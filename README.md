@@ -15,9 +15,9 @@ Java 8 (Spring boot 2.2.0)
 ```
 
 ### Roles & Responsbility
-SpeedCheckProducer: 1초에 1번 자동차 위치 및 속도 정보를 speed-check stream으로 Publish
-SpeedChecksStream: speed-check stream을 subscribe하여 임계 정책을 초과하 경우 violations stream으로 Publish
-ViolationStream: violation stream을 consume
+SpeedCheckProducer: 1초에 1번 자동차 위치 및 속도 정보를 speed-check stream으로 Publish  
+SpeedChecksStream: speed-check stream을 subscribe하여 임계 정책을 초과하 경우 violations stream으로 Publish  
+ViolationStream: violation stream을 consume  
 
 ### Reference
 https://springoneplatform.io/2019/sessions/rabbitmq-kafka
